@@ -16,11 +16,11 @@ const auth = require("./middleware/auth");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cors());
+// app.use(cors());
 
 app.use(
   cors({
-    origin: "https://real-trust-13.onrender.com",
+    origin: "https://real-trust-5.vercel.app",
     credentials: true,
   })
 );
