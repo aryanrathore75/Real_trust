@@ -18,7 +18,7 @@ export default function Signup() {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://realtrust-ug3p.onrender.com/auth/signup",
+        `${process.env.REACT_APP_API_URL}/auth/signup`,
         { ...input },
         { withCredentials: true }
       );

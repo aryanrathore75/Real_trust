@@ -8,9 +8,7 @@ export default function ClientPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(
-          "https://realtrust-ug3p.onrender.com/clients"
-        );
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/clients`);
         setClients(res.data);
       } catch (err) {
         console.error(err);

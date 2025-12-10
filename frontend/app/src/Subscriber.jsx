@@ -15,7 +15,7 @@ const Subscriber = () => {
     }
 
     try {
-      await axios.post("https://realtrust-ug3p.onrender.com/subscribe", {
+      await axios.post(`${process.env.REACT_APP_API_URL}/subscribe`, {
         email,
       });
       toast.success("Thanks for subscribing!", {

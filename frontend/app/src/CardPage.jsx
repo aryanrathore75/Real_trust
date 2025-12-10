@@ -9,7 +9,7 @@ export default function CardPage() {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          "https://realtrust-ug3p.onrender.com/projects"
+          `${process.env.REACT_APP_API_URL}/projects`
         );
         setProjects(res.data);
       } catch (err) {

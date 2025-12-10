@@ -30,7 +30,7 @@ export default function AddProject() {
 
     try {
       const res = await axios.post(
-        "https://realtrust-ug3p.onrender.com/projects",
+        `${process.env.REACT_APP_API_URL}/projects`,
         project,
         {
           headers: { Authorization: `Bearer ${token}` },

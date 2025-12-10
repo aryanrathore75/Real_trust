@@ -20,10 +20,7 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(
-        "https://realtrust-ug3p.onrender.com/contacts",
-        formData
-      );
+      await axios.post(`${process.env.REACT_APP_API_URL}/contacts`, formData);
       toast.success("Thanks for contact Us!", {
         autoClose: 2000,
         closeOnClick: true,

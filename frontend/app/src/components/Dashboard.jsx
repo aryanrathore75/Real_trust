@@ -13,14 +13,14 @@ export default function Dashboard() {
 
       try {
         const resProjects = await axios.get(
-          "https://realtrust-ug3p.onrender.com/projects",
+          `${process.env.REACT_APP_API_URL}/projects`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
         );
 
         const resClients = await axios.get(
-          "https://realtrust-ug3p.onrender.com/clients",
+          `${process.env.REACT_APP_API_URL}/clients`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
