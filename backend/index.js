@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 require("dotenv").config();
 
 const Newsletter = require("./models/Newsletter");
@@ -16,12 +16,14 @@ const auth = require("./middleware/auth");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(
-  cors({
-    origin: "https://your-frontend-url.onrender.com",
-    credentials: true,
-  })
-);
+app.use(cors());
+
+// app.use(
+//   cors({
+//     origin: "https://your-frontend-url.onrender.com",
+//     credentials: true,
+//   })
+// );
 
 app.use("/auth", authRoutes);
 
