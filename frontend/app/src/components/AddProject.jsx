@@ -29,9 +29,13 @@ export default function AddProject() {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await axios.post("http://localhost:3000/projects", project, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const res = await axios.post(
+        "https://realtrust-ug3p.onrender.com/projects",
+        project,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
 
       handleSuccess(res.data.message);
 

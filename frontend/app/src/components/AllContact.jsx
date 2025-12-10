@@ -7,7 +7,9 @@ export default function AllContact() {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/contact");
+        const res = await axios.get(
+          "https://realtrust-ug3p.onrender.com/contact"
+        );
         setAllContact(res.data);
       } catch (err) {
         console.error("Failed to fetch contacts", err);

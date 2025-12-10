@@ -8,7 +8,9 @@ export default function CardPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/projects");
+        const res = await axios.get(
+          "https://realtrust-ug3p.onrender.com/projects"
+        );
         setProjects(res.data);
       } catch (err) {
         console.error(err);

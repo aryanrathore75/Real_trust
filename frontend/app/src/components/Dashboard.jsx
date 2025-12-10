@@ -12,13 +12,19 @@ export default function Dashboard() {
       const token = localStorage.getItem("token");
 
       try {
-        const resProjects = await axios.get("http://localhost:3000/projects", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+        const resProjects = await axios.get(
+          "https://realtrust-ug3p.onrender.com/projects",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
 
-        const resClients = await axios.get("http://localhost:3000/clients", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+        const resClients = await axios.get(
+          "https://realtrust-ug3p.onrender.com/clients",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
 
         setProjects(resProjects.data);
         setClients(resClients.data);

@@ -18,7 +18,7 @@ export default function Signup() {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/auth/signup",
+        "https://realtrust-ug3p.onrender.com/auth/signup",
         { ...input },
         { withCredentials: true }
       );

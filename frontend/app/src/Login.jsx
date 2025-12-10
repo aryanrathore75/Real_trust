@@ -18,7 +18,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:3000/auth/login",
+        "https://realtrust-ug3p.onrender.com/auth/login",
         { ...inputValue },
         { withCredentials: true }
       );

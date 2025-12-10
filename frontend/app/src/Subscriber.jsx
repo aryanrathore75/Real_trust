@@ -15,7 +15,9 @@ const Subscriber = () => {
     }
 
     try {
-      await axios.post("http://localhost:3000/subscribe", { email });
+      await axios.post("https://realtrust-ug3p.onrender.com/subscribe", {
+        email,
+      });
       toast.success("Thanks for subscribing!", {
         autoClose: 2000,
         closeOnClick: true,

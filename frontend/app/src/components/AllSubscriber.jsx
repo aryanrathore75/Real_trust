@@ -7,7 +7,9 @@ export default function AllSubscriber() {
   useEffect(() => {
     const fetchSubscribers = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/subscribe");
+        const res = await axios.get(
+          "https://realtrust-ug3p.onrender.com/subscribe"
+        );
         setAllSubscriber(res.data);
       } catch (err) {
         console.error("Failed to fetch subscribers", err);
