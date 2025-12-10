@@ -15,16 +15,13 @@ const Subscriber = () => {
     }
 
     try {
-      await axios.post(`${process.env.REACT_APP_API_URL}/subscribe`, {
-        email,
-      });
+      await axios.post(`${import.meta.env.VITE_API_URL}/subscribe`, { email });
       toast.success("Thanks for subscribing!", {
         autoClose: 2000,
         closeOnClick: true,
       });
 
       setEmail("");
-
       setTimeout(() => navigate("/"), 2000);
     } catch (err) {
       toast.error("Something went wrong!", {

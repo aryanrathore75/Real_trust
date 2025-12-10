@@ -13,14 +13,14 @@ export default function Dashboard() {
 
       try {
         const resProjects = await axios.get(
-          `${process.env.REACT_APP_API_URL}/projects`,
+          `${import.meta.env.VITE_API_URL}/projects`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
         );
 
         const resClients = await axios.get(
-          `${process.env.REACT_APP_API_URL}/clients`,
+          `${import.meta.env.VITE_API_URL}/clients`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -95,8 +95,9 @@ export default function Dashboard() {
           </div>
         ))}
       </div>
-      <AllContact></AllContact>
-      <AllSubscriber></AllSubscriber>
+
+      <AllContact />
+      <AllSubscriber />
     </div>
   );
 }

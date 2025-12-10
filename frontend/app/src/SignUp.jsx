@@ -18,7 +18,7 @@ export default function Signup() {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        `${process.env.REACT_APP_API_URL}/auth/signup`,
+        `${import.meta.env.VITE_API_URL}/auth/signup`,
         { ...input },
         { withCredentials: true }
       );

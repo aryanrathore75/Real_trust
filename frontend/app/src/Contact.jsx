@@ -20,8 +20,8 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${process.env.REACT_APP_API_URL}/contacts`, formData);
-      toast.success("Thanks for contact Us!", {
+      await axios.post(`${import.meta.env.VITE_API_URL}/contacts`, formData);
+      toast.success("Thanks for contacting us!", {
         autoClose: 2000,
         closeOnClick: true,
       });

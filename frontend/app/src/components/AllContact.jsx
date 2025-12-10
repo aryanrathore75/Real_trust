@@ -7,7 +7,7 @@ export default function AllContact() {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/contact`);
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/contact`);
         setAllContact(res.data);
       } catch (err) {
         console.error("Failed to fetch contacts", err);

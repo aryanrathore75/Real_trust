@@ -8,7 +8,7 @@ export default function AllSubscriber() {
     const fetchSubscribers = async () => {
       try {
         const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/subscribe`
+          `${import.meta.env.VITE_API_URL}/subscribe`
         );
         setAllSubscriber(res.data);
       } catch (err) {

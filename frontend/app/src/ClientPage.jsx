@@ -8,7 +8,8 @@ export default function ClientPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/clients`);
+        // ✅ Vite style environment variable
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/clients`);
         setClients(res.data);
       } catch (err) {
         console.error(err);

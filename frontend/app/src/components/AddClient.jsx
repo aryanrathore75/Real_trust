@@ -32,7 +32,7 @@ export default function AddClient() {
 
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_API_URL}/clients`,
+        `${import.meta.env.VITE_API_URL}/clients`,
         client,
         {
           headers: { Authorization: `Bearer ${token}` },

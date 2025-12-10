@@ -30,7 +30,7 @@ export default function AddProject() {
 
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_API_URL}/projects`,
+        `${import.meta.env.VITE_API_URL}/projects`,
         project,
         {
           headers: { Authorization: `Bearer ${token}` },

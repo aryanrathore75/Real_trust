@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import AdminNavbar from "../components/AdminNavbar";
 import Dashboard from "../components/Dashboard";
 import AddClient from "../components/AddClient";
-import AddProject from "../components/Addproject";
+import AddProject from "../components/AddProject";
 import AdminRoute from "../components/AdminRoute";
 
 export default function AdminPage() {
