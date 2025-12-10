@@ -18,12 +18,12 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
 
-// app.use(
-//   cors({
-//     origin: "https://your-frontend-url.onrender.com",
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin: "https://real-trust-13.onrender.com",
+    credentials: true,
+  })
+);
 
 app.use("/auth", authRoutes);
 
