@@ -8,8 +8,9 @@ export default function CardPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // ✅ Vite style environment variable
-        const res = await axios.get(`${import.meta.env.VITE_API_URL}/projects`);
+        const res = await axios.get(
+          "https://real-trust-37zv.onrender.com/projects"
+        );
         setProjects(res.data);
       } catch (err) {
         console.error(err);

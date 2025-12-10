@@ -15,7 +15,9 @@ const Subscriber = () => {
     }
 
     try {
-      await axios.post(`${import.meta.env.VITE_API_URL}/subscribe`, { email });
+      await axios.post("https://real-trust-37zv.onrender.com/subscribe", {
+        email,
+      });
       toast.success("Thanks for subscribing!", {
         autoClose: 2000,
         closeOnClick: true,

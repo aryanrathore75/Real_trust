@@ -32,7 +32,7 @@ export default function AddClient() {
 
     try {
       const res = await axios.post(
-        `${import.meta.env.VITE_API_URL}/clients`,
+        "https://real-trust-37zv.onrender.com/clients",
         client,
         {
           headers: { Authorization: `Bearer ${token}` },

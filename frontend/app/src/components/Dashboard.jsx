@@ -13,14 +13,14 @@ export default function Dashboard() {
 
       try {
         const resProjects = await axios.get(
-          `${import.meta.env.VITE_API_URL}/projects`,
+          "https://real-trust-37zv.onrender.com/projects",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
         );
 
         const resClients = await axios.get(
-          `${import.meta.env.VITE_API_URL}/clients`,
+          "https://real-trust-37zv.onrender.com/clients",
           {
             headers: { Authorization: `Bearer ${token}` },
           }

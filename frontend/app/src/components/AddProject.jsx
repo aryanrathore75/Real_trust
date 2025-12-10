@@ -30,7 +30,7 @@ export default function AddProject() {
 
     try {
       const res = await axios.post(
-        `${import.meta.env.VITE_API_URL}/projects`,
+        "https://real-trust-37zv.onrender.com/projects",
         project,
         {
           headers: { Authorization: `Bearer ${token}` },

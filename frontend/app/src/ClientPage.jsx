@@ -8,8 +8,9 @@ export default function ClientPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // ✅ Vite style environment variable
-        const res = await axios.get(`${import.meta.env.VITE_API_URL}/clients`);
+        const res = await axios.get(
+          "https://real-trust-37zv.onrender.com/clients"
+        );
         setClients(res.data);
       } catch (err) {
         console.error(err);

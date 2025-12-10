@@ -20,7 +20,10 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${import.meta.env.VITE_API_URL}/contacts`, formData);
+      await axios.post(
+        "https://real-trust-37zv.onrender.com/contacts",
+        formData
+      );
       toast.success("Thanks for contacting us!", {
         autoClose: 2000,
         closeOnClick: true,

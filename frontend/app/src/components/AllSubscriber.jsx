@@ -8,7 +8,7 @@ export default function AllSubscriber() {
     const fetchSubscribers = async () => {
       try {
         const res = await axios.get(
-          `${import.meta.env.VITE_API_URL}/subscribe`
+          "https://real-trust-37zv.onrender.com/subscribe"
         );
         setAllSubscriber(res.data);
       } catch (err) {
